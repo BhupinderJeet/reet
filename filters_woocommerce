@@ -1,0 +1,27 @@
+add_filter('gettext', 'translate_reply');
+add_filter('ngettext', 'translate_reply');
+
+function translate_reply($translated) {
+$translated = str_ireplace('Tax', 'GST', $translated);
+return $translated;
+}
+
+
+
+
+
+// define the wpcf7_is_tel callback   contact form 7 phone number field validation
+function custom_filter_wpcf7_is_tel( $result, $tel ) { 
+  $result = preg_match( '/^\(?\+?([0-9]{1,4})?\)?[-\. ]?(\d{10})$/', $tel );
+  return $result; 
+}
+
+add_filter( 'wpcf7_is_tel', 'custom_filter_wpcf7_is_tel', 10, 2 );
+
+
+
+/* adding GST text on invoice. */
+
+add_filter( 'woocommerce_countries_inc_tax_or_vat', function () {
+  return __( '(incl. GST)', 'woocommerce' );
+});
