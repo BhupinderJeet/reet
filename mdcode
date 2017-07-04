@@ -1,0 +1,195 @@
+
+
+
+$id=56;
+$query_id=get_post($id);
+<?php echo $query_id->post_title;?>
+
+<?php echo $query_id->post_content;?>
+
+<?php echo $query_id->post_excerpt;?>
+
+<?php echo get_post_meta($id, 'Get_started',  true); ?>
+
+ <?php get_cat_name( $cat_id ) ?> 
+
+<?php echo get_the_post_thumbnail($post_id4, 'full', array('class' => 'img-responsive cv33')); ?>
+
+
+<?php echo wp_trim_words($queried_post1->post_content, 40, '...' );?>
+
+<?php echo wp_trim_words($blog_data->post_content, 20, '...');?>
+
+<?php the_permalink(); ?>
+
+To make the date appear as “Monday January 11, 2017”, for example, use
+$post_date = get_the_date( 'l F j, Y' ); echo $post_date;
+
+To make the date appear as “Wed Jan 9”, for example, use
+$post_date = get_the_date( 'D M j' ); echo $post_date;
+<?php $pfx_date = get_the_date( $format, $post_id ); ?>
+
+
+
+<!-- To access menu dynamically... -->
+</php wp_nav_menu(array('menu'=>'Header_onvico_manue','container' => 'false', 'menu_class' => 'nav navbar-nav navbar-right top_menu'))?></li>
+
+
+get_post_meta($post->ID,'City',true);
+
+
+
+<!-- image fetch from categry-->
+: <?php
+$params = array('posts_per_page' => 5, 'post_type' => 'product');
+$wc_query = new WP_Query($params);
+?>
+<?php if ($wc_query->have_posts()) : ?>
+<?php while ($wc_query->have_posts()) :
+$wc_query->the_post(); ?>
+<?php echo get_the_post_thumbnail($post_id); ?> 	
+<?php the_title(); ?>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php else:  ?>
+<p>
+  <?php _e( 'No Products'); ?>
+</p>
+<?php endif; ?>
+
+<!-- image fetch from categry end-->
+
+
+
+
+
+<!weidget product fetch--start make>
+
+register_sidebar( array(
+		'name'          => __( 'Rent', 'twentythirteen' ),
+		'id'            => 'sidebar-5',
+		'description'   => __( 'Appears in the footer section of the site.', 'twentythirteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	
+	
+	
+	
+	and put in page
+	 <?php dynamic_sidebar('Sale'); ?>
+	
+<!weidget product fetch end-->
+
+
+<!post product fetch-start->
+
+       <?php
+				$params = array('posts_per_page' => 5, 'post_type' => 'product');
+				$wc_query = new WP_Query($params);
+				?>
+				<?php if ($wc_query->have_posts()) : ?>
+				<?php while ($wc_query->have_posts()) :
+						$wc_query->the_post(); ?>
+				<?php echo get_the_post_thumbnail($post_id); ?> 	
+				<?php the_title(); ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+				<?php else:  ?>
+				<p>
+				     <?php _e( 'No Products'); ?>
+				</p>
+
+
+
+<!post product fetch end-->
+
+
+
+
+1
+
+
+<?php
+   $args = array( 'posts_per_page' => 5, 'category' => 42 'order'=>'Asc');
+ $myposts = get_posts( $args );
+    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+<div class="col-md-12 whitaa">
+<div class="col-md-4"> 
+<?php echo get_the_post_thumbnail( $_post->ID, 'thumbnail', array( 'class' => 'img-responsive img_blog' ));?>
+			
+     
+</div>
+
+<div class="col-md-8 desc">
+<h2><?php the_title(); ?></h2>
+<?php echo wp_trim_words(get_the_content(), 40, '...');?>
+			
+<p class="text-left date"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo get_the_date();> &nbsp;&nbsp; <?php echo get_author_name();?></p>
+			<p class="text-right"><a href="<?php the_permalink(); ?>" class="btn btn-redm"> Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a></p>
+</div>
+
+</div>
+<?php endforeach; 
+    wp_reset_postdata();?>
+    
+    
+    
+2 <!---post contant start-->
+
+<?php
+	$post_id1 = 364;
+	$queried_post1 = get_post($post_id1);
+	?>
+	<?php echo $queried_post1->post_title; ?>
+	
+	<?php echo $queried_post1->post_content;?>
+	
+	<?php echo get_the_post_thumbnail($post_id1) ;?> 
+
+ <?php echo wp_trim_words($queried_post1->post_content, 40, '...' );?>
+
+<?php echo post_permalink( $post_id1 ); ?>
+
+<!---post contant- end->
+
+
+  3  <?php get_cat_name( $cat_id ) ?>
+
+
+
+ 4 <!--Header nave bar color change->
+
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+   <script>
+jQuery(document).ready(function() {
+    jQuery(window).scroll(function() {
+             if (jQuery(this).scrollTop()<=50)
+					 {
+						//console.log("scrolling");
+						jQuery('.navbaaar').css({"background-color": "#FFFACD","border-left": "none","border-right": "none","border-right": "none","border-top": "none","border-bottom": "1px solid rgb(138, 133, 133)","box-shadow": "rgba(0, 0, 0, 0.298039) 0px 2px 3px 1px"});
+					
+						
+						//jQuery('.top_barr').show();
+	 }
+	else if(jQuery(this).scrollTop()>=200)
+					 {
+					   jQuery('.navbaaar').css({"background": "#25d4eb", "border": "none","box-shadow":"none"});
+					 }
+else{
+					   jQuery('.navbaaar').css({"background": "none", "border": "none","box-shadow":"none"});
+					 }
+
+        });
+});
+
+
+
+
+ <!--Header nave bar color change-End--->
+ 
+ 5. 
