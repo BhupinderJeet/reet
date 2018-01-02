@@ -1,0 +1,5 @@
+define( 'CONCATENATE_SCRIPTS', false );
+
+wp-config script conflict of wp
+
+Add this next to host line in wp-config
