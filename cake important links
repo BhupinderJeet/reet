@@ -10,3 +10,25 @@ https://stackoverflow.com/questions/32242104/how-to-check-current-password-in-ca
 Embed iframe with dynamic address
 
 https://codepen.io/engza/details/Kqafe
+
+
+
+ACL:
+https://trinitytuts.com/cakephp3-acl-implementation/
+
+
+
+Sessions:
+ if(!is_null($this->request->session()->read('Auth.User.id'))) {
+ User is already login
+ }	else	{
+ User Need to Login
+ }
+$this->request->Session();
+
+
+Auto complete jQueryUi dropdown:
+
+http://jqueryui.com/autocomplete/#combobox
+
+
