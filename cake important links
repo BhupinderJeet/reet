@@ -1,0 +1,42 @@
+Change Password code :
+
+(Working)
+http://base-syst.com/2016/09/16/password-validation-when-changing-password-in-cakephp-3/
+
+(get refrence from below link):
+https://stackoverflow.com/questions/32242104/how-to-check-current-password-in-cakephp-3-x-from-model
+
+
+Embed iframe with dynamic address
+
+https://codepen.io/engza/details/Kqafe
+
+
+
+ACL:
+https://trinitytuts.com/cakephp3-acl-implementation/
+
+
+
+Sessions:
+ if(!is_null($this->request->session()->read('Auth.User.id'))) {
+ User is already login
+ }	else	{
+ User Need to Login
+ }
+$this->request->Session();
+
+
+Auto complete jQueryUi dropdown:
+
+http://jqueryui.com/autocomplete/#combobox
+****************************************************************************
+
+HTML TO PDF LINK TUTORIAL:
+https://pritomkumar.blogspot.in/2017/04/generate-pdf-in-cakephp-3x-with-cakepdf.html
+(3.5 v)
+
+http://blog.andolasoft.com/2011/06/how-to-generate-pdf-file-in-cakephp.html
+(mine)
+
+
