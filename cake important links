@@ -1,0 +1,90 @@
+Change Password code :
+
+(Working)
+http://base-syst.com/2016/09/16/password-validation-when-changing-password-in-cakephp-3/
+
+(get refrence from below link):
+https://stackoverflow.com/questions/32242104/how-to-check-current-password-in-cakephp-3-x-from-model
+
+
+Embed iframe with dynamic address
+
+https://codepen.io/engza/details/Kqafe
+
+
+
+ACL:
+https://trinitytuts.com/cakephp3-acl-implementation/
+
+
+
+Sessions:
+ if(!is_null($this->request->session()->read('Auth.User.id'))) {
+ User is already login
+ }	else	{
+ User Need to Login
+ }
+$this->request->Session();
+
+
+Auto complete jQueryUi dropdown:
+
+http://jqueryui.com/autocomplete/#combobox
+
+****************************************************************************
+
+To download tcpdf (engine used with cakepdf to convert HTML to PDF) with composer::::::::::
+
+./composer.phar require tecnickcom/tcpdf
+
+******************************************************************************************
+
+HTML TO PDF :
+1. Install cakepdf:
+./composer.phar require friendsofcake/cakepdf
+
+2. INstall WKHTMLTOPDF
+(tutorial)
+https://stackoverflow.com/questions/2273534/how-to-install-wkhtmltopdf-on-a-linux-based-shared-hosting-web-server?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+____________commands:
+$ wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+
+$ tar -xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+
+______Syntax:
+$ wget {relavant url to binary from link above}
+$ tar -xvf {filename of above wget'd file}
+
+
+
+https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+
+(engine to convert html to pdf.... used by below plugin)
+
+cakePdf
+
+****************************************
+TCPDF : to convert HTML to PDF used by cakepdf.
+
+
+**********************************
+Project links:
+
+Cake:
+
+http://www.mccarthysrealestate.com.au/
+
+Wordpress:
+
+https://koins.club/
+
+http://movewithmatt.com.au/
+
+https://soflocoolers.com/
+
+http://www.wellwrap.com/
+
+Shopify:
+
+https://nappytastic.com/
+
